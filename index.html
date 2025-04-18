@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="build/css/style.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
+            rel='stylesheet'>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet">
+        <script src="/build/js/imageSwitcher.js"></script>
+        <script type="module" src="/build/js/headerScroll.js"></script>
+        <script type="module" src="/build/js/CounterUp.js"></script>
+        <script type="module" src="/build/js/counters.js"></script>
+
+        <!-- Lenis Scroll -->
+        <link rel="stylesheet"
+            href="https://unpkg.com/lenis@1.2.3/dist/lenis.css">
+        <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script>
+        <script>
+            const lenis = new Lenis({
+                autoRaf: true,
+            });
+        </script>
+        <title>Bicycles</title>
+    </head>
+    <body class="min-h-dvh w-full">
+        <header
+            class="z-9999 flex justify-between items-center clamp-[px,4,8,sm,sm-l] py-5 fixed">
+            <a href="index.html">
+                <span
+                    class="clamp-[text,lg,2xl,sm,sm-l] font-bold uppercase">Bicycles</s>
+            </a>
+            <nav id="main-nav"
+                class="space-x-4.5 sm:max-md:space-x-4 clamp-[text,sm,base,sm,sm-l]">
+                <a href="#new-arrivals">Catalog</a>
+                <a href="#statistics">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+        <button id="back-to-top"
+            class="h-12 aspect-square hidden z-50 bg-black text-white rounded-full fixed bottom-5 right-5">
+            <i class='bx bx-up-arrow-alt text-2xl absolute inset-0 top-1/2 -translate-y-1/2'></i>
+        </button>
+        <section src="/build/img/hero.jpg" id="hero"
+            class="justify-items-center bg-[url('/build/img/hero.jpg')] bg-cover pt-32 pb-64">
+            <h1
+                class="max-w-[530px] clamp-[text,5xl,8xl,sm,md] text-center font-medium">Be
+                prepared for any road</h1>
+            <p class="text-center mt-8 mb-9">Bicycles that give freedom and
+                confidence on every kilometer</p>
+            <button
+                class="bg-black text-white rounded-full border border-black hover:bg-white hover:text-black px-14 py-2.5">
+                <p class="flex items-center relative">Shop now <i
+                        class='bx bx-chevron-right text-2xl'></i></p>
+            </button>
+        </section>
+        <main class="justify-items-center overflow-x-clip">
+            <section id="new-arrivals" class="container py-15">
+                <div class="heading flex-col sm-l:flex-row items-center gap-4">
+                    <h2>New arrivals</h2>
+                    <a href="https://www.fujibikes.eu/collections/all-bikes"
+                        target="_blank"
+                        class="bg-white text-black border rounded-full hover:bg-black hover:text-white px-14 py-2.5">
+                        <p class="flex items-center relative">Catalog <i
+                                class='bx bx-chevron-right text-2xl'></i></p>
+                    </a>
+                </div>
+                <div
+                    class="bicycles flex flex-wrap justify-center 2xl:justify-between gap-3 mt-4 mb-15">
+                    <article class="bicycle">
+                        <a
+                            href="https://www.fujibikes.eu/products/2021-traverse-1-5"
+                            target="_blank" class="image-wrapper">
+                            <img src="/build/img/bicycles/traverse.png"
+                                alt="traverse 1.5">
+                        </a>
+                        <div class="product-details">
+                            <h6>Traverse 1.5</h6>
+                            <p>$750</p>
+                        </div>
+                    </article>
+                    <article class="bicycle">
+                        <a
+                            href="https://www.fujibikes.eu/products/2021-nevada-29-1-9"
+                            target="_blank" class="image-wrapper">
+                            <img src="/build/img/bicycles/nevada.png"
+                                alt="nevada 26 1.9v" class="scale-90">
+                        </a>
+                        <div class="product-details">
+                            <h6>Nevada 26 1.9 V</h6>
+                            <p>$530</p>
+                        </div>
+                    </article>
+                    <article class="bicycle">
+                        <a href target="_blank" class="image-wrapper">
+                            <img src="/build/img/bicycles/feather.png"
+                                alt="feather 2021" class="scale-85">
+                        </a>
+                        <div class="product-details">
+                            <h6>Feather</h6>
+                            <p>$750</p>
+                        </div>
+                    </article>
+                    <article class="bicycle">
+                        <a href target="_blank" class="image-wrapper">
+                            <img src="/build/img/bicycles/ambient.png"
+                                alt="ambient 29 eqp" class="scale-80">
+                        </a>
+                        <div class="product-details">
+                            <h6>Ambient 29 EQP</h6>
+                            <p>$3150</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <section id="statistics" class="bg-black text-white pt-16 pb-12">
+                <div class="wrapper">
+                    <div
+                        class="heading flex-col md:flex-row items-center md:items-end! gap-4">
+                        <h2
+                            class="max-w-130 text-3xl max-md:text-center font-medium">Our
+                            company
+                            has been on the market for over 10 years and has
+                            established itself as a reliable supplier of quality
+                            bicycles and accessories.</h2>
+                        <button
+                            class="flex shrink-0 bg-black text-white rounded-full border border-white hover:bg-white hover:text-black px-14 py-2.5">
+                            <p class="flex items-center relative">View more <i
+                                    class='bx bx-chevron-right text-2xl'></i></p>
+                        </button>
+                    </div>
+                    <div
+                        class="statistics-wrapper w-full grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-4 divide-y lg:divide-y-0 mt-15">
+                        <div class="statistic lg:border-r">
+                            <h3 class="counter">96+</h3>
+                            <p>A wide range of bike models: city, mountain,
+                                sports, and children's bikes. We're sure you'll
+                                find the perfect one for your needs.</p>
+                        </div>
+                        <div class="statistic 2xl:border-l">
+                            <h3 class="counter">15+</h3>
+                            <p>With years of experience in bike sales and
+                                service, our experts provide expert advice and
+                                help in choosing the perfect bike.</p>
+                        </div>
+                        <div class="statistic lg:border-r 2xl:border-l">
+                            <h3 class="counter">10+</h3>
+                            <p>We work with over 10 manufacturers and offer
+                                bicycles from leading brands known for their
+                                quality and durability.</p>
+                        </div>
+                        <div class="statistic 2xl:border-l">
+                            <h3 class="counter-percentage">100%</h3>
+                            <p>If for any reason the product doesn't suit you,
+                                we offer a 100% return guarantee within 14 days
+                                of purchase.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="categories" class="py-16">
+                <div class="wrapper">
+                    <div
+                        class="heading flex-col md:flex-row items-center md:items-end! gap-4">
+                        <h2
+                            class="max-w-130 clamp-[text,xl,3xl,sm,md] text-center md:text-left font-medium">We
+                            understand
+                            how important it is to choose the right bike that
+                            fits your lifestyle. In our catalog, you will find
+                            models for every need:</h2>
+                        <a href="https://www.fujibikes.eu/collections/all-bikes"
+                            target="_blank"
+                            class="bg-white text-black rounded-full border border-black hover:bg-black hover:text-white px-14 py-2.5">
+                            <p class="flex items-center relative">Catalog<i
+                                    class='bx bx-chevron-right text-2xl'></i></p>
+                        </a>
+                    </div>
+                    <img loading="lazy" id="categoryImage"
+                        src="/build/img/categories/mountain.jpg"
+                        alt="category image"
+                        class=" w-full aspect-video object-cover transition-all duration-300 mt-6 mb-7.5">
+                    <section id="categories-wrapper"
+                        class="w-full grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-4 gap-2.5 mt-6">
+                        <article class="category selected"
+                            data-img="/build/img/categories/mountain.jpg">
+                            <h3 class>Mountain bikes <i
+                                    class='bx bx-up-arrow-alt'></i></h3>
+                            <p>Mountain bikes are specialized vehicles designed
+                                for riding on rough terrain, equipped with
+                                sturdy frames, wide tires, and enhanced
+                                suspension.</p>
+                        </article>
+                        <article class="category"
+                            data-img="/build/img/categories/road.jpg">
+                            <h3 class="font-semibold mb-2">Road bikes <i
+                                    class='bx bx-up-arrow-alt'></i></h3>
+                            <p>Road bikes are lightweight bicycles designed for
+                                smooth, paved surfaces, featuring thin tires,
+                                aerodynamic frames, and a focus on speed and
+                                efficiency.</p>
+                        </article>
+                        <article class="category"
+                            data-img="/build/img/categories/city.jpg">
+                            <h3 class="font-semibold mb-2">City bikes <i
+                                    class='bx bx-up-arrow-alt'></i></h3>
+                            <p>City bikes are comfortable and practical bicycles
+                                designed for urban commuting, featuring a
+                                relaxed geometry, durable components, and often
+                                equipped with accessories like racks and
+                                lights.</p>
+                        </article>
+                        <article class="category"
+                            data-img="/build/img/categories/electric.jpg">
+                            <h3 class="font-semibold mb-2">Electric bikes <i
+                                    class='bx bx-up-arrow-alt'></i></h3>
+                            <p>Electric bikes are bicycles equipped with a motor
+                                that assists with pedaling, making them ideal
+                                for longer distances, hill climbing, and
+                                reducing the effort required during rides.</p>
+                        </article>
+                    </section>
+                </div>
+            </section>
+            <section id="recommendations"
+                class="bg-[url('/build/img/reccomendations.jpg')] max-md:bg-left max-lg:bg-center py-12">
+                <div class="wrapper !justify-items-start space-y-128">
+                    <h2
+                        class="max-w-130 clamp-[text,xl,3xl,sm,md] text-white text-center md:text-left font-medium text-shadow-xs">Choosing
+                        a bike depends on many factors: the type of
+                        terrain you'll be riding on, your physical abilities,
+                        and your personal preferences.</h2>
+                    <button
+                        class="bg-white text-black rounded-full border border-black hover:bg-black hover:text-white px-14 py-2.5">
+                        <p class="flex items-center relative">Recommendations <i
+                                class='bx bx-chevron-right text-2xl'></i></p>
+                    </button>
+                </div>
+            </section>
+            <section id="hot-deals" class="container py-15">
+                <div class="heading">
+                    <h2>Hot deals</h2>
+                    <a href="https://www.fujibikes.eu/collections/all-bikes"
+                        target="_blank"
+                        class="bg-white text-black border rounded-full hover:bg-black hover:text-white px-14 py-2.5">
+                        <p class="flex items-center relative">Catalog <i
+                                class='bx bx-chevron-right text-2xl'></i></p>
+                    </a>
+                </div>
+                <div
+                    class="bicycles flex flex-wrap justify-center 2xl:justify-between gap-3 mb-15">
+                    <article class="bicycle">
+                        <a href target="_blank" class="image-wrapper">
+                            <img src="/build/img/bicycles/absolute.png"
+                                alt="absolute 1.7" class=" scale-85">
+                        </a>
+                        <div class="product-details">
+                            <h6>Absolute 1.7</h6>
+                            <div class="prices">
+                                <p class="old-price">$750</p>
+                                <p class="new-price">$550</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="bicycle">
+                        <a href target="_blank" class="image-wrapper">
+                            <img src="/build/img/bicycles/nevada-1-9.png"
+                                alt="nevada 29 1.9v" class="scale-90">
+                        </a>
+                        <div class="product-details">
+                            <h6>Nevada 29 1.9 V</h6>
+                            <div class="prices">
+                                <p class="old-price">$700</p>
+                                <p class="new-price">$570</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="bicycle">
+                        <a href target="_blank" class="image-wrapper">
+                            <img src="/build/img/bicycles/jari.png"
+                                alt="jari 2021" class=" scale-85">
+                        </a>
+                        <div class="product-details">
+                            <h6>Jari 2.3</h6>
+                            <div class="prices">
+                                <p class="old-price">$1200</p>
+                                <p class="new-price">$950</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="bicycle">
+                        <a href target="_blank" class="image-wrapper">
+                            <img src="/build/img/bicycles/slm.png"
+                                alt="slm 29 2.7" class=" scale-80">
+                        </a>
+                        <div class="product-details">
+                            <h6>Slm 29 2.7</h6>
+                            <div class="prices">
+                                <p class="old-price">$1950</p>
+                                <p class="new-price">$1750</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <section id="faq" class="py-16">
+                <h2 class="w-full mb-10 pl-9.5">Frequently
+                    Asked
+                    Questions</h2>
+                <div
+                    class="faq-container w-full md:container divide-y-2 divide-gray-400 px-4 [&>details:first-child]:border-t-2 [&>details:first-child]:border-gray-400 [&>details:last-child]:border-b-2 [&>details:last-child]:border-gray-400">
+                    <details open name="question">
+                        <summary>How do I choose the right bike for my riding
+                            level?</summary>
+                        <p>Road bikes are lightweight bicycles designed for
+                            smooth, paved surfaces, featuring thin tires,
+                            aerodynamic frames, and a focus on speed and
+                            efficiency.</p>
+                    </details>
+                    <details name="question">
+                        <summary>What bike size is right for me?</summary>
+                        <p>Choosing the right bike size depends on your height
+                            and inseam. Refer to our bike sizing chart for more
+                            information.</p>
+                    </details>
+                    <details name="question">
+                        <summary>What warranties come with the bikes and
+                            accessories?</summary>
+                        <p>Our bikes come with a 2-year warranty on the frame
+                            and a 1-year warranty on components.</p>
+                    </details>
+                    <details name="question">
+                        <summary>Can I return or exchange a bike if it doesn't
+                            suit me?</summary>
+                        <p>Yes, you can return or exchange a bike within 30 days
+                            of purchase. Please see our return policy for
+                            details.</p>
+                    </details>
+                    <details name="question">
+                        <summary>How should I take care of my bike?</summary>
+                        <p>Regular maintenance includes cleaning, lubricating
+                            the chain, and checking tire pressure. We recommend
+                            regular tune-ups at a local bike shop.</p>
+                    </details>
+                    <details name="question">
+                        <summary>Do you offer delivery and assembly
+                            services?</summary>
+                        <p>Yes, we offer delivery and assembly services for an
+                            additional fee. Contact us for more information.</p>
+                    </details>
+                </div>
+            </section>
+        </main>
+        <footer id="contact" class="space-y-13 bg-black text-white pt-14">
+            <div
+                class="wrapper flex max-lg:flex-col-reverse justify-start items-center gap-x-60 gap-y-15">
+                <nav id="footer-nav"
+                    class="flex max-sm-l:flex-col gap-x-20 gap-y-10 *:flex sm-l:*:flex-col sm-l:*:space-y-4 max-sm-l:*:space-x-8 *:**:clamp-[text,sm,base,sm,md]">
+                    <ul>
+                        <a href="#new-arrivals">New arrival</a>
+                        <a href="#hot-deals">Hot deals</a>
+                        <a href="https://www.fujibikes.eu/collections/all-bikes"
+                            target="_blank">Catalog</a>
+                    </ul>
+                    <ul>
+                        <a href="#statistics">About</a>
+                        <a href="javascript:;">Contact</a>
+                        <a href="https://www.fujibikes.eu/collections/all-bikes"
+                            target="_blank">Choose a bike</a>
+                    </ul>
+                    <ul>
+                        <a href="https://www.instagram.com/ronasit_ui/?hl=en"
+                            target="_blank">Instagram</a>
+                        <a href="https://www.facebook.com/RonasITSoftware/"
+                            target="_blank">Facebook</a>
+                        <a href="https://dribbble.com/ronasit/shots"
+                            target="_blank">Dribbble</a>
+                    </ul>
+                </nav>
+                <form action="#" method="post" class="space-y-6">
+                    <h2 class="text-center">Join our cycling community</h2>
+                    <input type="email" placeholder="Type your email"
+                        autocomplete="off" name="email" id="email"
+                        class="w-full field-sizing-content bg-white text-black rounded-full px-4.5 py-2.5 placeholder:text-black">
+                </form>
+            </div>
+            <p
+                class="w-full text-center text-[22.5vw] uppercase leading-none overflow-hidden">Bicycles</p>
+        </footer>
+    </body>
+</html>

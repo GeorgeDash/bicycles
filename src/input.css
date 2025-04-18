@@ -1,0 +1,177 @@
+@import "tailwindcss";
+@plugin "tailwind-clamp" {
+    minSize: 20rem,
+    maxSize: 90rem
+}
+
+/* Root and theme styling */
+:root {
+    interpolate-size: allow-keywords;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+@theme {
+    --font-sans: Urbanist, sans-serif;
+
+    --breakpoint-sm: 320px;
+    --breakpoint-sm-m: 375px;
+    --breakpoint-sm-l: 425px;
+    --breakpoint-sm-xl: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1024px;
+    --breakpoint-2xl: 1200px;
+    --breakpoint-3xl: 1440px;
+
+    --color-lightgray: #e5e5e5;
+}
+
+.container{
+    @apply px-4;
+}
+
+/* Default styling */
+h2{
+    @apply text-3xl font-medium;
+}
+
+header {
+    @apply w-full sm:max-md:bg-[#e3dfe0] transition-all duration-300;
+}
+
+footer, main, section {
+    @apply w-full;
+}
+
+section{
+    @apply scroll-mt-5;
+}
+
+section:not([id="new-arrivals"], [id="hot-deals"]), footer {
+    @apply justify-items-center;
+}
+
+button, a {
+    @apply cursor-pointer transition-all duration-300;
+}
+
+input:focus{
+    outline: none
+}
+
+.wrapper {
+    @apply container justify-items-center px-4;
+}
+
+.heading {
+    @apply w-full flex justify-between items-center;
+}
+
+
+/* Custom classes */
+
+/* Back-to-top button */
+#back-to-top.show {
+    @apply block;
+}
+
+.scrolled-header {
+    @apply md:bg-lightgray md:transition-all md:duration-300;
+}
+
+article.bicycle {
+    @apply w-70 mt-5;
+}
+
+article.bicycle > .image-wrapper {
+    @apply w-full aspect-[30/35] flex items-center justify-center bg-lightgray;
+
+    & > img {
+        @apply mix-blend-multiply object-contain;
+    }
+}
+
+article.bicycle .product-details {
+    @apply w-full flex justify-between items-center mt-1;
+
+    & > h6 {
+        @apply uppercase font-semibold;
+    }
+
+    & > p, & p.old-price {
+        @apply text-gray-400;
+    }
+
+    & .prices{
+        @apply flex space-x-2;
+
+        & > p.old-price {
+            @apply line-through;
+        }
+
+        & > p.new-price {
+            @apply font-semibold;
+        }
+    }
+}
+
+article.category{
+    @apply cursor-pointer border-t-2 border-t-black transition-all duration-375 hover:bg-black hover:text-white p-4 mb-10;
+
+    &.selected {
+        @apply bg-black text-white;
+    }
+
+    & > h3 {
+        @apply flex justify-between items-center text-2xl font-semibold mb-2;
+
+        & > i {
+            @apply rotate-45;
+        }
+    }
+}
+
+.statistic{
+    @apply flex flex-col items-start px-6 py-8;
+
+    & > h3 {
+        @apply text-6xl font-medium mb-4;
+    }
+
+    & > p {
+        @apply text-gray-300;
+    }
+}
+
+
+/* FAQ */
+details {
+    @apply py-5;
+
+    &::details-content{
+        @apply overflow-hidden transition-all duration-375 transition-discrete;
+        block-size: 0;
+    }
+
+    &[open]::details-content{
+        /* Fallback if calc-size() is not supported */
+        block-size: auto;
+
+        block-size: calc-size(auto, size);
+    }
+
+    &[open] > summary{
+        @apply after:rotate-90;
+    }
+}
+
+details > p {
+    @apply md:w-1/2 text-gray-600 clamp-[text,sm,base,sm,md] mt-2 max-md:pr-9;
+}
+
+summary {
+    @apply cursor-pointer flex items-center clamp-[text,base,xl,sm,md] font-semibold pr-20 relative marker:content-none after:content-["▶"] after:text-sm after:transition-all after:duration-375 after:absolute after:right-5;
+}
