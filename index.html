@@ -16,14 +16,12 @@
         <script type="module" src="/build/js/CounterUp.js"></script>
         <script type="module" src="/build/js/counters.js"></script>
 
-        <!-- Lenis Scroll -->
-        <link rel="stylesheet"
-            href="https://unpkg.com/lenis@1.2.3/dist/lenis.css">
-        <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script>
+        <!-- Ensure page loads always on top -->
         <script>
-            const lenis = new Lenis({
-                autoRaf: true,
-            });
+            history.scrollRestoration = "manual";
+            window.onbeforeunload = () => {
+                window.scrollTo(0, 0);
+            }
         </script>
         <title>Bicycles</title>
     </head>
@@ -42,8 +40,9 @@
             </nav>
         </header>
         <button id="back-to-top"
-            class="h-12 aspect-square hidden z-50 bg-black text-white rounded-full fixed bottom-5 right-5">
-            <i class='bx bx-up-arrow-alt text-2xl absolute inset-0 top-1/2 -translate-y-1/2'></i>
+            class="h-12 aspect-square hidden z-50 bg-black text-white border border-white rounded-full fixed bottom-5 right-5">
+            <i
+                class='bx bx-up-arrow-alt text-2xl absolute inset-0 top-1/2 -translate-y-1/2'></i>
         </button>
         <section src="/build/img/hero.jpg" id="hero"
             class="justify-items-center bg-[url('/build/img/hero.jpg')] bg-cover pt-32 pb-64">
@@ -75,7 +74,8 @@
                         <a
                             href="https://www.fujibikes.eu/products/2021-traverse-1-5"
                             target="_blank" class="image-wrapper">
-                            <img src="/build/img/bicycles/traverse.png"
+                            <img decoding="async" loading="lazy"
+                                src="/build/img/bicycles/traverse.webp"
                                 alt="traverse 1.5">
                         </a>
                         <div class="product-details">
@@ -87,7 +87,8 @@
                         <a
                             href="https://www.fujibikes.eu/products/2021-nevada-29-1-9"
                             target="_blank" class="image-wrapper">
-                            <img src="/build/img/bicycles/nevada.png"
+                            <img decoding="async" loading="lazy"
+                                src="/build/img/bicycles/nevada.webp"
                                 alt="nevada 26 1.9v" class="scale-90">
                         </a>
                         <div class="product-details">
@@ -97,7 +98,8 @@
                     </article>
                     <article class="bicycle">
                         <a href target="_blank" class="image-wrapper">
-                            <img src="/build/img/bicycles/feather.png"
+                            <img decoding="async" loading="lazy"
+                                src="/build/img/bicycles/feather.webp"
                                 alt="feather 2021" class="scale-85">
                         </a>
                         <div class="product-details">
@@ -107,7 +109,8 @@
                     </article>
                     <article class="bicycle">
                         <a href target="_blank" class="image-wrapper">
-                            <img src="/build/img/bicycles/ambient.png"
+                            <img decoding="async" loading="lazy"
+                                src="/build/img/bicycles/ambient.webp"
                                 alt="ambient 29 eqp" class="scale-80">
                         </a>
                         <div class="product-details">
@@ -179,14 +182,14 @@
                                     class='bx bx-chevron-right text-2xl'></i></p>
                         </a>
                     </div>
-                    <img loading="lazy" id="categoryImage"
-                        src="/build/img/categories/mountain.jpg"
+                    <img decoding="async" loading="lazy" id="categoryImage"
+                        src="/build/img/categories/mountain.webp"
                         alt="category image"
-                        class=" w-full aspect-video object-cover transition-all duration-300 mt-6 mb-7.5">
+                        class="max-lg:hidden w-full aspect-video object-cover transition-all duration-300 mt-6 mb-7.5">
                     <section id="categories-wrapper"
-                        class="w-full grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-4 gap-2.5 mt-6">
+                        class="w-full grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-4 gap-2.5 mt-6 max-lg:mt-12">
                         <article class="category selected"
-                            data-img="/build/img/categories/mountain.jpg">
+                            data-img="/build/img/categories/mountain.webp">
                             <h3 class>Mountain bikes <i
                                     class='bx bx-up-arrow-alt'></i></h3>
                             <p>Mountain bikes are specialized vehicles designed
@@ -195,7 +198,7 @@
                                 suspension.</p>
                         </article>
                         <article class="category"
-                            data-img="/build/img/categories/road.jpg">
+                            data-img="/build/img/categories/road.webp">
                             <h3 class="font-semibold mb-2">Road bikes <i
                                     class='bx bx-up-arrow-alt'></i></h3>
                             <p>Road bikes are lightweight bicycles designed for
@@ -204,7 +207,7 @@
                                 efficiency.</p>
                         </article>
                         <article class="category"
-                            data-img="/build/img/categories/city.jpg">
+                            data-img="/build/img/categories/city.webp">
                             <h3 class="font-semibold mb-2">City bikes <i
                                     class='bx bx-up-arrow-alt'></i></h3>
                             <p>City bikes are comfortable and practical bicycles
@@ -214,7 +217,7 @@
                                 lights.</p>
                         </article>
                         <article class="category"
-                            data-img="/build/img/categories/electric.jpg">
+                            data-img="/build/img/categories/electric.webp">
                             <h3 class="font-semibold mb-2">Electric bikes <i
                                     class='bx bx-up-arrow-alt'></i></h3>
                             <p>Electric bikes are bicycles equipped with a motor
@@ -254,7 +257,8 @@
                     class="bicycles flex flex-wrap justify-center 2xl:justify-between gap-3 mb-15">
                     <article class="bicycle">
                         <a href target="_blank" class="image-wrapper">
-                            <img src="/build/img/bicycles/absolute.png"
+                            <img decoding="async" loading="lazy"
+                                src="/build/img/bicycles/absolute.webp"
                                 alt="absolute 1.7" class=" scale-85">
                         </a>
                         <div class="product-details">
@@ -267,7 +271,8 @@
                     </article>
                     <article class="bicycle">
                         <a href target="_blank" class="image-wrapper">
-                            <img src="/build/img/bicycles/nevada-1-9.png"
+                            <img decoding="async" loading="lazy"
+                                src="/build/img/bicycles/nevada-1-9.webp"
                                 alt="nevada 29 1.9v" class="scale-90">
                         </a>
                         <div class="product-details">
@@ -280,7 +285,8 @@
                     </article>
                     <article class="bicycle">
                         <a href target="_blank" class="image-wrapper">
-                            <img src="/build/img/bicycles/jari.png"
+                            <img decoding="async" loading="lazy"
+                                src="/build/img/bicycles/jari.webp"
                                 alt="jari 2021" class=" scale-85">
                         </a>
                         <div class="product-details">
@@ -293,7 +299,8 @@
                     </article>
                     <article class="bicycle">
                         <a href target="_blank" class="image-wrapper">
-                            <img src="/build/img/bicycles/slm.png"
+                            <img decoding="async" loading="lazy"
+                                src="/build/img/bicycles/slm.webp"
                                 alt="slm 29 2.7" class=" scale-80">
                         </a>
                         <div class="product-details">
@@ -380,12 +387,18 @@
                             target="_blank">Dribbble</a>
                     </ul>
                 </nav>
-                <form action="#" method="post" class="space-y-6">
+                <div class="space-y-6">
                     <h2 class="text-center">Join our cycling community</h2>
-                    <input type="email" placeholder="Type your email"
-                        autocomplete="off" name="email" id="email"
-                        class="w-full field-sizing-content bg-white text-black rounded-full px-4.5 py-2.5 placeholder:text-black">
-                </form>
+                    <div class="input-wrapper flex items-center relative">
+                        <input type="email" placeholder="Type your email..."
+                            autocomplete="off" name="email" id="email"
+                            class="w-full bg-white text-black rounded-full px-4.5 py-2.5 placeholder:text-gray-400">
+                        <button type="submit"
+                            class="h-10 aspect-square flex justify-center items-center bg-black text-white text-2xl rounded-full absolute right-1">
+                            <i class='bx bx-chevron-right'></i>
+                        </button>
+                    </div>
+                </div>
             </div>
             <p
                 class="w-full text-center text-[22.5vw] uppercase leading-none overflow-hidden">Bicycles</p>

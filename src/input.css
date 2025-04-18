@@ -9,10 +9,6 @@
     interpolate-size: allow-keywords;
 }
 
-::-webkit-scrollbar{
-    display: none;
-}
-
 @theme {
     --font-sans: Urbanist, sans-serif;
 
@@ -34,6 +30,10 @@
 }
 
 /* Default styling */
+*{
+    @apply selection:bg-gray-400 selection:text-white;
+}
+
 h2{
     @apply text-3xl font-medium;
 }
@@ -119,10 +119,10 @@ article.bicycle .product-details {
 }
 
 article.category{
-    @apply cursor-pointer border-t-2 border-t-black transition-all duration-375 hover:bg-black hover:text-white p-4 mb-10;
+    @apply lg:cursor-pointer border-t-2 border-t-black transition-all duration-375 lg:hover:bg-black lg:hover:text-white p-4 mb-10;
 
     &.selected {
-        @apply bg-black text-white;
+        @apply lg:bg-black lg:text-white;
     }
 
     & > h3 {
